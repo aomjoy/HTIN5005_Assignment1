@@ -96,15 +96,6 @@ saves its output before the next script can run.
           (TreeExplainer; full test set was not used due to runtime).
         - Output: shap_summary_plot.png, shap_bar_plot.png
  
-Approximate runtime (single mid-range laptop CPU):
-    merge_data.py            ~2-5 minutes  (depends on disk speed)
-    forward_fill.py          ~1-2 minutes
-    feature_engineering.py   ~5-10 minutes (expanding window is the slow part)
-    prepare_train_test.py    <1 minute
-    train_evaluate.py        ~10-15 minutes (Random Forest + XGBoost on 
-                              ~1.2M resampled rows)
-    explain_shap.py          ~30-60 minutes for 1000 samples (TreeExplainer)
- 
 ================================================================================
 5. RESULTS SUMMARY (for quick reference; full discussion in report)
 ================================================================================
